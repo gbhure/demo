@@ -65,7 +65,7 @@ func kafkaInit(broker BrokerInfo) {
 
 func runServer(target TargetInfo) {
 	if target.Port == 0 {
-		logger.Warn("Prometheus target port not configured, using default 8080")
+		logger.Warn("Prometheus target port not configured, using default 9090")
 		target.Port = 8080
 	}
 	logger.Debug("Starting HTTP Server on %d port", target.Port)
